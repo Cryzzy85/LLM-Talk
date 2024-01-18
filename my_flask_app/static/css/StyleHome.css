@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'quicklime';
+    src: url('../fonts/Quicklime-Bold.ttf');
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'quicklime';
+}
+
+#background {
+    background-image: url("../images/16_9.png");
+    height: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#header {
+    font-size: 85px;
+    color:#afa6b6;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#aboutButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: lightblue;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#ProjectData{
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: lightblue; /* Changed the color to lightblue */
+}
+
+#ProjectData a{
+    text-decoration: none;
+    color: inherit; /* The link will inherit the color from the #ProjectData */
+    color:#afa6b6;
+}
+
+#aboutButton, #ProjectData{
+    font-weight: normal; /* you can use other values like 'bold', 'bolder', 'lighter', '100' to '900' */
+    display: inline-block;  /* This allows you to add padding if necessary */
+    padding: 0;  /* Adjust as necessary */
+    margin: 0;   /* Adjust as necessary */
+    text-transform: none;  /* Ensures the text is not transformed to uppercase or lowercase */
+    line-height: 1;  /* Adjust as necessary */
+}
+
+.about-text {
+    color:#afa6b6;
+    line-height: 3;
+}
+
+.modal-content p {
+    font-size: 25px; /* change this to the size you want */
+}
+
+
+.close {
+    color:lightblue;
+    float: right;    /* This positions the close button to the right */
+    font-size: 30px; /* Change this to adjust the size */
+    font-weight: bold;
+    cursor: pointer; /* Changes the cursor when you hover over the close button */
+}
+
+.close:hover,
+.close:focus {
+    color:#afa6b6;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content {
+    background-color: rgb(13,39,47,0.8);  /* semi-transparent white */
+    padding: 20px;
+    border: 2px solid lightblue;  /* light red border */
+    width: 80%;
+    max-height: 80%;  /* Add this */
+    overflow: auto;  /* Add this */
+    position: fixed;  /* Fixed positioning */
+    top: 50%;  /* Center vertically */
+    left: 50%;  /* Center horizontally */
+    transform: translate(-50%, -50%);  /* Correct shift for exact centering */
+    border-radius: 10px;  /* Rounded corners */
+    color: lightblue; /* Light blue text */
+}
+
+
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity increased to 0.7 */
+}
+
+
+#nav {
+    position: absolute;
+    top: 50%;
+    right: 10%;  /* Adjusted the position */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.link {
+    text-decoration: none;
+    color: #afa6b6;
+    font-size: 50px;  /* Made the font size bigger */
+}
+
+.link:hover {
+    color: lightblue;  /* Change color to white when hovering */
+    text-decoration: none;  /* Underline text when hovering */
+}
+
+
+
+.link-llm {
+    position: absolute;
+    bottom: 10px;
+    left: absolute;
+    background-color: transparent;
+    border:  2px lightblue;
+    color: #afa6b6;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 32px;
+    font-size: 25px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.4s;  /* transition the transform property */
+}
+
+.link-llm:hover {
+    transform: translateY(-10px);  /* move the link up by 10px on hover */
+}
+
+
+#icon {
+    position: absolute;
+    top: calc(80% + 50px);  /* Adjusted the position */
+    left: 80px;
+    transform: translateX(-50%);
+    width: 80px;  /* Adjust as necessary */
+    height: 80px;  /* Adjust as necessary */
+}
+
+
+

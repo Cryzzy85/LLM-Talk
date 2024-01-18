@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>Timestamp</th>
+      <th>Role</th>
+      <th>Content</th>
+      <th>Model Reasoning</th>
+      <th>Conversation ID</th>
+      <th>Error Handling</th>
+      <th>User Modeling</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for conversation in conversations %}
+    <tr>
+      <td>{{ conversation.Timestamp }}</td>
+      <td>{{ conversation.Role }}</td>
+      <td>{{ conversation.Content }}</td>
+      <td>{{ conversation.ModelReasoning }}</td>
+      <td>{{ conversation.ConversationID }}</td>
+      <td>{{ conversation.ErrorHandling }}</td>
+      <td>{{ conversation.UserModeling }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

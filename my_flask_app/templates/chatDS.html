@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Deeper Summary</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/StyleChat.css') }}">
+</head>
+
+<body>
+    <h1>Deeper Summary</h1>
+
+    <!-- Assistant message and icon -->
+    {% if data %}
+    <div class="AI-message">
+        <img src="{{ url_for('static', filename='images/AIchat.png') }}" alt="Model response icon" class="AI-icon">
+        <p>{{ data }}</p>
+    </div>
+    {% endif %}
+
+    <!-- User input form and icon -->
+    <div class="user-message">
+  <form method="POST" action="{{ url_for('deeper_summary', title=title) }}" autocomplete="off">
+    <input type="text" id="user_input" name="user_input" autocomplete="off">
+    <input type="submit" value="SEND">
+    </form>
+    </div>
+</body>
+</html>

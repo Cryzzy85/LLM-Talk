@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+    <script src="{{ url_for('static', filename='js/interactive.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/interactive.css') }}">
+</head>
+<body>
+    <div id="wordcloud"></div>
+    <script>
+        generateWordCloud('MitteJuni-I');  // This can be any document
+    </script>
+</body>
+</html>

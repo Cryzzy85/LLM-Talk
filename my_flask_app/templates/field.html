@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Papers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+</head>
+<body>
+
+  <div id="header-div">
+    <h1 class="header-title"> Deeper Summery (DS)</h1>
+    <h2 class="header-title"> I need Context (INC)</h2>
+    <h3 class="header-title"> Discuss Topic (DT)</h3>
+
+</div>
+
+
+    <div>
+        <h5>Research Fields</h5>
+        <select id="researchFieldSelect">
+            {% for research_field in research_fields %}
+            <option value="{{ research_field }}">{{ research_field }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div>
+        <h5>Complexity State</h5>
+        <select id="complexityStateSelect">
+            {% for complexity_state in complexity_states %}
+            <option value="{{ complexity_state }}">{{ complexity_state }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div>
+        <h5>Source</h5>
+        <select id="startingPointSelect">
+            {% for starting_point in starting_points %}
+            <option value="{{ starting_point }}">{{ starting_point }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div id="main-div">
+        {% for paper in papers %}
+        <div class="row" data-research-field="{{ paper.ResearchField }}" data-complexity-state="{{ paper.ComplexityState }}" data-starting-point="{{ paper.StartingPoint }}">
+            <div class="col">{{ paper.Year }} - {{ paper.Title }}</div>
+            <div class="col">
+                <button onclick="location.href='{{ paper.SourceID }}'" type="button">Paper</button>
+                <button data-abstract="{{ paper.Abstract }}" onclick="showAbstract(this)" type="button">Abstract</button>
+
+            </div>
+            <div class="col">
+                <button onclick="location.href='/deepersummary/{{ paper.Title|urlencode }}'" type="button">DS</button>
+                <button onclick="location.href='/ineedcontext/{{ paper.Title|urlencode }}'" type="button">INC</button>
+                <button onclick="location.href='/discusstopic/{{ paper.Title|urlencode }}'" type="button">DT</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div id="abstractModal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="abstractText">Abstract text goes here.</p>
+    </div>
+    </div>
+
+
+    <div id="abstract-popup" style="display: none;"></div>
+
+    <script src="{{ url_for('static', filename='js/filter.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/abstract.js') }}"></script>
+
+
+</body>
+</html>
+
+
+
+
+

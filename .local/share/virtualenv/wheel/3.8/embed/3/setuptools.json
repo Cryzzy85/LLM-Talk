@@ -1,0 +1,19 @@
+{
+  "completed": "2023-06-06T22:53:01.803151Z",
+  "periodic": true,
+  "started": "2023-06-06T22:52:46.124626Z",
+  "versions": [
+    {
+      "filename": "setuptools-67.8.0-py3-none-any.whl",
+      "found_date": "2023-06-06T22:52:48.350867Z",
+      "release_date": "2023-05-19T19:38:35.000000Z",
+      "source": "periodic"
+    },
+    {
+      "filename": "setuptools-67.7.2-py3-none-any.whl",
+      "found_date": "2023-06-06T22:52:56.610505Z",
+      "release_date": "2023-04-24T11:37:02.000000Z",
+      "source": "periodic"
+    }
+  ]
+}

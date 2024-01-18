@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'quicklime';
+    src: url('../fonts/Quicklime-Bold.ttf');
+}
+
+body {
+    font-family: 'quicklime', sans-serif;
+    background-color: rgb(13, 18, 30);
+    color: lightblue;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/bubble.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header-form-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 80px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+    grid-gap: 5px; /* Space between grid items */
+    width: 80%;  /* Adjust as needed */
+}
+
+
+#neural-net-icon {
+    width: 30%;  /* adjust this value as needed */
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+
+#header-div {
+    position: absolute;
+    top: 0;    /* Adjust as needed */
+    right: -120px;  /* Adjust as needed */
+    width: 30%;
+}
+
+.header-title {
+    font-size: 2em;
+    margin: 0;
+    padding-top: 40px;
+    color:#afa6b6;
+
+}
+
+h5  {
+    font-size: 2em;
+    margin: 0;
+    padding-top: 40px;
+    color:lightblue;
+
+}
+
+select {
+    width: 50%;
+    padding: 5px;
+    margin: 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #afa6b6;
+    color: #0d123e;
+}
+
+select option {
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+#ComplexityState {
+    margin-left: auto;
+}
+
+#main-div {
+    margin-top: 100px; /* adjust as needed */
+}
+
+
+
+#main-div .row {
+    display: flex;
+    border: 1px solid lightblue;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+#main-div .row .col {
+    flex: 1;
+    padding: 0;
+}
+
+#main-div .row .col:first-child {
+
+    flex:3;
+}
+
+
+
+#abstract-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    color: lightblue;
+    padding: 50px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+button {
+    color: lightblue;
+    background-color:rgb(13, 18, 30);
+    border: 1px solid lightblue;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family: 'quicklime', sans-serif;
+}
+
+button:hover {
+    background-color: lightblue;
+    color: rgb(13, 18, 30);
+
+}
+
+    #abstract-popup {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.75); /* semi-transparent black background */
+        color: white;
+        padding: 50px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #abstract-content {
+        background-color: lightblue;
+        color: rgb(13, 18, 30);
+        padding: 20px;
+        max-width: 50%;
+        border-radius: 10px;
+    }
+
+    .close-button {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: none;
+        border: none;
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content{
+    background-color:rgb (25, 14, 64,0.8);  /* semi-transparent white */
+    padding: 20px;
+    border: 2px solid lightblue;  /* light red border */
+    width: 80%;
+    max-height: 80%;  /* Add this */
+    overflow: auto;  /* Add this */
+    position: fixed;  /* Fixed positioning */
+    top: 50%;  /* Center vertically */
+    left: 50%;  /* Center horizontally */
+    transform: translate(-50%, -50%);  /* Correct shift for exact centering */
+    border-radius: 10px;  /* Rounded corners */
+    color: lightblue; /* Light blue text */
+
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

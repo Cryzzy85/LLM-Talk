@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Papers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+</head>
+<body>
+
+<div id="header-div">
+    <h1 class="header-title">Deeper Summary (DS)</h1>
+    <h2 class="header-title">I Need Context (INC)</h2>
+    <h3 class="header-title">Discuss Topic (DT)</h3>
+</div>
+
+<div>
+    <h5>Research Fields</h5>
+    {% for research_field in research_fields %}
+    <div>
+        <input type="checkbox" id="{{ research_field }}" name="{{ research_field }}" value="{{ research_field }}">
+        <label for="{{ research_field }}">{{ research_field }}</label>
+    </div>
+    {% endfor %}
+</div>
+
+
+<div id="main-div">
+    {% for paper in papers %}
+    <div class="row" data-research-field="{{ paper.ResearchField }}">
+        <div class="col">{{ paper.Year }} - {{ paper.Title }}</div>
+        <div class="col">
+            <button onclick="location.href='{{ paper.SourceID }}'" type="button">Paper</button>
+            <button data-abstract="{{ paper.Abstract }}" onclick="showAbstract(this)" type="button">Abstract</button>
+        </div>
+        <div class="col">
+            <button onclick="location.href='/post_deepersummary/{{ paper.Title|urlencode }}'" type="button">DS</button>
+            <button onclick="location.href='/post_ineedcontext/{{ paper.Title|urlencode }}'" type="button">INC</button>
+            <button onclick="location.href='/post_discusstopic/{{ paper.Title|urlencode }}'" type="button">DT</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div id="abstractModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="abstractText"></p>
+  </div>
+  <label class="checkbox-label">
+    NLP
+    <input type="checkbox" name="researchFields" value="NLP">
+    <span class="checkbox-custom"></span>
+  </label>
+</div>
+<script src="{{ url_for('static', filename='js/postfield_filter.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/abstract.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/PostRoute.js') }}"></script>
+</body>
+</html>

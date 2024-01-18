@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'quicklime';
+    src: url('../fonts/Quicklime-ExtraBold.ttf');
+}
+
+body {
+    font-family: 'Quicklime', sans-serif;
+    background-color: rgb(13, 18, 30);
+    color: lightblue;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/sparks.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-size: 22px;
+    overflow: hidden;
+}
+
+#header h1 {
+    font-size: 44px;  /* Increase the size of the text */
+    margin-bottom: 50px;  /* Add space below the text */
+    color: #afa6b6;
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -333px;  /* Pull the nav downwards */
+}
+
+#nav a.link {  /* Make the rule more specific */
+    font-size: 55px !important;  /* Increase the font size of nav links and make it important */
+    margin-top: 55px; /* Add more space between links */
+    margin-bottom: 55px; /* Add more space between links */
+}
+
+#topic-cluster {
+    position: relative;
+    top: 10px;  /* Pull the topic cluster downwards */
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #afa6b6;
+}
+
+.link:hover {
+    color: lightblue;
+
+}

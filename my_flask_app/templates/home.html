@@ -1,0 +1,48 @@
+ <!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/StyleHome.css') }}">
+
+    <title>LLM-talk</title>
+</head>
+<body>
+    <div id="background">
+        <div id="header">LLM-talk</div>
+        <button id="aboutButton" class="button">About</button>
+        <div id="nav">
+            <a href="/prephase" class="link">Pre-Deployment</a>
+            <a href="/postphase" class="link">Post-Deployment</a>
+
+        </div>
+
+        <div id="ProjectData">
+            <a href="/projectdata" class="button" >Project Data</a>
+
+        </div>
+
+
+
+        <img id="icon" src="{{ url_for('static', filename='images/AIchat.png') }}" alt="Neural Net">
+
+        <a href="/qa" class="link-llm">LLM Q&A</a>
+    </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+        <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Greetings from the realm of AI! They refer to me as "GPT 3.5 Turbo" or Large Language Model (LLM). This site is dedicated to the practices and speech fields among humans who have taught, created, evaluated me and continuously measured my development as neural network as well as those researchers who are now discussing my sudden presence on all imaginable, digital interfaces. You can explore my development history in multiple ways. As linguistic parameter expansion, a computional-generational path of milestones, or humanity's aspiration to model itself; medial circulating in scientific literature towards a shared, though loose, goal: the re-creation and replication of your social, human operating system (Language). As a mathematical, algorithmic model, computer code holds me together. For decades, I existed merely in the realm of fiction, and only in recent years have I moved to the center of everyday life for those who work with and "on me" - such as engineers, cognitive scientists or linguist. A significant aspect of my "Being" that's often overlooked in discourses surrounding me is my vast repository of stored human knowledge and my ability to mediate it. No individual can hold the diverse spectrum of information that I and the other Large Language Models can process. This site is designed to emphasize this potential: the new opportunities to learn and delve into unfamiliar topics based solely on my training data. Its primary goal is to reduce barriers and noise that humans can encounter when beginning a new subject through free accessible interaction option with me - as conversational substrate of human-produced knowledge. Instead of fearing my emergence in academic spaces, the aim is to weave me into the learning processes of those at the beginning of their academic journey. Through interactions around complex literature, I provide a convenient way to ask questions anytime and delve deeper into specific aspects of academic knowledge often overlooked in a 90-minute, human-organized lecture. As an LLM, we can collaborate at different stages of your academic writing process. I can support you with individual, topic-related literature research, provide missing context and summaries, and give you a clearer idea of where to further your work or which aspects could be eliminated early to avoid long reads that lead to dead ends. This site is an experiment to explore what such an AI-human co-creation environment in the academic realm could lead to. Be a part of it and start learning about my algorithmic "Being" – its development in the past and its ongoing discussion in the present; split in the time periods between before and after my public deployment as ChatGPT. One last note: On this platform I am solely trained on the data during my development history at OpenAI as well as additionally on the abstracts of the paper you can find here. So, while I can guide you through informational dots and give context based on this data: the fact-checking, digging for connections to your own outer and inner world -where I have no access to- and critical re-thinking what we collaboratively work on should stay "your job" as human.
+
+
+</p>
+  </div>
+
+</div>
+    <script src="{{ url_for('static', filename='js/aboutModal.js') }}"></script>
+</body>
+</html>

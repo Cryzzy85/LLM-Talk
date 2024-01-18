@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'quicklime';
+    src: url('../fonts/Quicklime-Extra-Bold.ttf');
+}
+
+body {
+    font-family: 'quicklime', sans-serif;
+    background-image: url("../images/removed.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: lightblue;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-top: 50px;
+    font-size: 2em;
+    color:lightblue;
+}
+
+header h1,h2 {
+    color:#afa6b6;
+}
+
+.image-text-container {
+    display: flex;
+    width: 75%;  /* Increase the width */
+    margin: 20px auto;
+    margin-left: 50px; /* Increase the left margin */
+}
+
+#div1-image, #div2-image {
+    position: relative;
+    width: 20%;
+    height: 0;
+    padding-bottom: 20%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50px;  /* adjust this value as needed */
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.5); /* Add this line */
+
+}
+
+#div1-image {
+    background-image: url('../images/learningtext.png');
+}
+
+#div2-image {
+    background-image: url('../images/worldblocks.png');
+}
+
+#div1-field, #div2-field {
+    color: lightblue;
+    width: 70%;
+    font-size: 1.5em;  /* Increase the text size */
+    padding: 20px;
+    margin-left: 120px;  /* Add more space on the left side */
+    text-align: left;
+}
+
+
+#div1-field a, #div2-field a {
+    color:#afa6b6;
+    text-decoration: none;
+    padding: 20px 0;
+    font-size: 1,5em;
+    transition: transform .3s;
+}
+
+
+#div1-field a:hover, #div2-field a:hover {
+    color: lightblue;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: calc(100vh - 60px);
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
